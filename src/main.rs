@@ -1,3 +1,12 @@
+use clap::Parser;
+use std::path::PathBuf;
+
+#[derive(Parser)]
+struct Args {
+    #[clap(long)]
+    src: PathBuf,
+}
+
 fn main() {
-    println!("Hello, world!");
+    let _args = Args::parse();
 }
